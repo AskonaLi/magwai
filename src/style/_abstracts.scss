@@ -1,0 +1,23 @@
+@use './var' as *;
+
+.main-wrapper {
+  max-width: 1820px;
+  margin: 0 auto;
+}
+
+.weight-bold {
+  font-weight: bold;
+}
+
+.anti-skew {
+  display: inline-block;
+  transform: skewX(17deg);
+}
+
+.open {
+  display: flex !important;
+}
+
+.weight-bold {
+  font-weight: bold;
+}

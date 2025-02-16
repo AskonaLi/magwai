@@ -1,0 +1,9 @@
+@use 'style/reset';
+@use 'style/fonts';
+@use 'style/var' as *;
+@use 'style/style';
+@use 'style/abstracts';
+
+@use 'style/blocks/header';
+@use 'style/blocks/planet';
+@use 'style/blocks/card';

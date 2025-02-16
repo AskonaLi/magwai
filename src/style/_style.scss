@@ -1,0 +1,8 @@
+@use '../style/var' as *;
+@use '../style/fonts' as *;
+
+body {
+  font-family: $montserrat;
+  background-color: $main-bgc;
+  color: $black;
+}

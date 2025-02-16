@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/magwai.svg" type="image/svg+xml" />
+    <link rel="icon" href="img/magwai-ico-png.png" type="image/png" />
+
+    <title>Magwai</title>
+  </head>
+  <body>
+    <header class="header main-wrapper">
+      <div class="header__burger">
+        <span class="header__burger-span"></span>
+      </div>
+
+      <div class="header__logos">
+        <a href="/">
+          <img
+            class="header__logos-icon"
+            src="./img/magwai.svg"
+            alt="Логотип Магвай"
+          />
+        </a>
+        <a href="/">
+          <img
+            class="header__logos-word"
+            src="./img/magwai-word-logo.svg"
+            alt="Слово Магвай на латинице"
+          />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item"><a href="#">УСЛУГИ</a></li>
+          <li class="header__nav-list-item"><a href="#">АБОНЕМЕНТЫ</a></li>
+          <li class="header__nav-list-item"><a href="#">ПОЧЕМУ МЫ</a></li>
+          <li class="header__nav-list-item"><a href="#">ОБОРУДОВАНИЕ</a></li>
+          <li class="header__nav-list-item"><a href="#">АКЦИИ</a></li>
+          <li class="header__nav-list-item"><a href="#">FAQ</a></li>
+          <li class="header__nav-list-item"><a href="#">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__contacts">
+        <a href="tel:+1234567890" class="header__contacts-phone">
+          <img
+            class="header__contacts-phone-logo"
+            alt="Значок телефонной трубки"
+            src="./img/phone-logo.png"
+          />
+        </a>
+        <div class="header__contacts-smbt">
+          <button class="header__contacts-smbt-btn">
+            <span class="anti-skew">ОСТАВИТЬ ЗАЯВКУ</span>
+          </button>
+          <div class="header__contacts-smbt-block"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="planet">
+        <div class="overlay"></div>
+        <article class="planet__article main-wrapper">
+          <h1 class="planet__title">Полет Илона Маска и&nbsp;DOGIE COIN</h1>
+          <p class="planet__paragraph">
+            В прошлый четверг все офигели от полета DOGIE COIN на марс.
+          </p>
+
+          <div class="planet__contacts-smbt">
+            <button class="planet__contacts-smbt-btn">
+              <span class="anti-skew">ОСТАВИТЬ ЗАЯВКУ</span>
+            </button>
+            <div class="planet__contacts-smbt-block"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="card main-wrapper">
+        <h2 class="card__title">Карточки</h2>
+        <ul class="card__list"></ul>
+        <div class="card__contacts-smbt">
+          <button class="card__contacts-smbt-btn">
+            <span class="anti-skew">загрузить еще</span>
+          </button>
+          <div class="card__contacts-smbt-block"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Подвал сайта</footer>
+
+    <template id="card-template">
+      <li class="card__item">
+        <img
+          class="card__item-img"
+          src="<%= imagePath ? imagePath : '' %>"
+          alt=""
+        />
+        <div class="card__item-container">
+          <h3 class="card__item-title"></h3>
+          <p class="card__item-paragraph"></p>
+          <p class="card__item-mark"></p>
+          <p class="card__item-date"></p>
+          <button class="card__item-button">Continue reading</button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>
