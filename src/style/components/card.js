@@ -10,7 +10,7 @@ export function createCard(cardTemplate, item) {
   const cardMark = cardElement.querySelector('.card__item-mark');
   const cardDate = cardElement.querySelector('.card__item-date');
 
-  cardImage.src = item.link;
+  cardImage.src = item.url;
   cardImage.alt = item.heading;
   cardTitle.textContent = item.heading;
   cardParagraph.textContent = item.title;
