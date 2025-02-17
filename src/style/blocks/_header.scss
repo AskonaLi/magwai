@@ -116,6 +116,10 @@
 }
 
 @media only screen and (width <= 768px) {
+  .header {
+    position: relative;
+  }
+
   .header__burger {
     display: flex;
     position: relative;
@@ -170,14 +174,14 @@
 
   .header__nav {
     display: none;
-    position: fixed;
-    height: calc(100vh - 119px);
-    width: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 119px;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 50;
-    overflow-y: auto;
     padding: 60px 50px;
     background-color: $main-bgc;
     animation: burgerAnimation 0.4s;
@@ -190,17 +194,13 @@
       font-weight: 700;
       font-size: 36px;
       line-height: 150%;
-
-      @supports (
-        (text-stroke: 2px $text-stroke-color) or
-          (-webkit-text-stroke: 2px $text-stroke-color)
-      ) {
-        &-list {
-          -webkit-text-stroke: 1px $text-stroke-color;
-          text-stroke: 2px $text-stroke-color;
-          text-shadow: none;
-        }
-      }
+      color: transparent;
+      // -webkit-text-stroke: 1px #808080;
+      text-shadow:
+        -1px 0 #808080,
+        0 1px #808080,
+        1px 0 #808080,
+        0 -1px #808080;
     }
 
     @keyframes burgerAnimation {

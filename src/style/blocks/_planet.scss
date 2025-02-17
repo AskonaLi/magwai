@@ -7,6 +7,8 @@
   background-repeat: no-repeat;
   width: 100%;
 
+  border-radius: 50px 50px 0 0;
+
   min-height: 960px;
 
   position: relative;
@@ -14,6 +16,17 @@
 
   justify-content: flex-end;
   align-content: end;
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 96px;
+    gap: 40px;
+    max-width: 686px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 100px;
+  }
 
   &__title {
     @include main-title;
@@ -43,17 +56,6 @@
   }
 }
 
-.planet__article {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 96px;
-  gap: 40px;
-  max-width: 686px;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 100px;
-}
-
 .overlay {
   position: absolute;
   opacity: 0.6;
@@ -65,77 +67,73 @@
 }
 
 @media only screen and (width <= 768px) {
-  .planet__title {
-    font-size: 38px;
-  }
-
   .planet {
     background-position: center;
     background-attachment: fixed;
     min-height: 907px;
-  }
 
-  .planet__article {
-    padding-bottom: 76px;
-    max-width: 686px;
-    padding-left: 49px;
-  }
+    &__article {
+      padding-bottom: 76px;
+      max-width: 686px;
+      padding-left: 49px;
+      padding-bottom: 52.31px;
+      padding-left: 40px;
+    }
 
-  .planet__paragraph {
-    opacity: 0.8;
-    max-width: 450px;
-  }
+    &__paragraph {
+      opacity: 0.8;
+      max-width: 450px;
+    }
 
-  .planet__article {
-    padding-bottom: 52.31px;
-    padding-left: 40px;
+    &__title {
+      font-size: 38px;
+    }
   }
 }
 
 @media only screen and (width <= 576px) {
-  .planet__title {
-    font-size: 30px;
-    max-width: 300px;
-  }
-
   .planet {
     background-position: bottom;
     background-attachment: local;
     min-height: 600px;
+
+    &__title {
+      font-size: 30px;
+      max-width: 300px;
+    }
   }
 }
 
 @media only screen and (width <= 360px) {
-  .planet__title {
-    font-size: 20px;
-    max-width: 250px;
-  }
-
   .planet {
     background-position: bottom;
     background-attachment: local;
     min-height: 495px;
-  }
 
-  .planet__article {
-    padding-bottom: 52.31px;
-    gap: 20px;
-    padding-left: 14.1px;
-  }
+    &__article {
+      padding-bottom: 52.31px;
+      gap: 20px;
+      padding-left: 14.1px;
+    }
 
-  .planet__paragraph {
-    max-width: 300px;
-    font-style: 14px;
-  }
+    &__paragraph {
+      max-width: 300px;
+      font-style: 14px;
+    }
 
-  .planet__contacts-smbt {
-    width: 228px;
-    margin-left: 10px;
-  }
+    &__title {
+      font-size: 20px;
+      max-width: 250px;
+    }
 
-  .planet__contacts-smbt-btn {
-    max-width: 228px;
-    height: 47px;
-    padding: 14px 15px 17px 15px;
+    &__contacts-smbt {
+      width: 228px;
+      margin-left: 10px;
+      &-btn {
+        max-width: 228px;
+        height: 47px;
+        padding: 14px 15px 17px 15px;
+      }
+    }
   }
 }
