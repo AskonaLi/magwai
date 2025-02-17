@@ -18,6 +18,7 @@ export function loadingCardsInfo() {
   }).then(getResponse);
 }
 
+// Функция загрузки данных о фотографии с сервера
 export function loadingImageInfo() {
   return fetch(`${config.baseUrl}/photos`, {
     method: 'GET',
