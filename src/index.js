@@ -19,6 +19,7 @@ document
   .addEventListener('click', function () {
     this.classList.toggle('active');
     document.querySelector('.header__nav').classList.toggle('open');
+    document.querySelector('.header__wrapper').classList.toggle('open');
     document.querySelector('.header').classList.toggle('active');
 
     if (document.body.style.overflow === 'hidden') {
