@@ -16,7 +16,6 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    
   },
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
@@ -50,17 +49,12 @@ module.exports = {
           'css-loader',
           {
             loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [require('postcss-preset-env')],
-              },
-            },
           },
           'sass-loader',
         ],
       },
       {
-        test: /\.woff2?$/i,
+        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
@@ -98,12 +92,7 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
+        use: 'babel-loader',
       },
     ],
   },
