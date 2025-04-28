@@ -102,6 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   cardTemplate: () => (/* binding */ cardTemplate),
 /* harmony export */   createCard: () => (/* binding */ createCard)
 /* harmony export */ });
+/* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../img/coins.png */ "./src/img/coins.png");
+
 var cardTemplate = document.querySelector('#card-template').content;
 
 // Функция создания карточки
@@ -112,11 +114,15 @@ function createCard(cardTemplate, item) {
   var cardParagraph = cardElement.querySelector('.card__item-paragraph');
   var cardMark = cardElement.querySelector('.card__item-mark');
   var cardDate = cardElement.querySelector('.card__item-date');
-  cardImage.src = item.url;
+  cardImage.src = item.url || _img_coins_png__WEBPACK_IMPORTED_MODULE_0__;
   cardImage.alt = item.heading;
   cardTitle.textContent = item.heading;
   cardParagraph.textContent = item.title;
   cardMark.textContent = item.body;
+  cardImage.addEventListener('error', function handleError() {
+    cardImage.src = _img_coins_png__WEBPACK_IMPORTED_MODULE_0__;
+    cardImage.alt = 'default';
+  });
 
   // Добавление жирности шрифта автору поста после фразы 'Posted by'
   if (item.date && typeof item.date === 'string') {
@@ -1184,4 +1190,4 @@ renderCards(); // Рендерим все карточки при загрузк
 
 /******/ })()
 ;
-//# sourceMappingURL=main.4163e26722a128899451.js.map
+//# sourceMappingURL=main.ed77517aad7841ff7d00.js.map
