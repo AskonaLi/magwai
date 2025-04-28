@@ -1,3 +1,5 @@
+import bridgeImg from '../../img/coins.png';
+
 export const cardTemplate = document.querySelector('#card-template').content;
 
 // Функция создания карточки
@@ -10,11 +12,16 @@ export function createCard(cardTemplate, item) {
   const cardMark = cardElement.querySelector('.card__item-mark');
   const cardDate = cardElement.querySelector('.card__item-date');
 
-  cardImage.src = item.url;
+  cardImage.src = item.url || bridgeImg;
   cardImage.alt = item.heading;
   cardTitle.textContent = item.heading;
   cardParagraph.textContent = item.title;
   cardMark.textContent = item.body;
+
+  cardImage.addEventListener('error', function handleError() {
+    cardImage.src = bridgeImg;
+    cardImage.alt = 'default';
+  });
 
   // Добавление жирности шрифта автору поста после фразы 'Posted by'
   if (item.date && typeof item.date === 'string') {
