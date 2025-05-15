@@ -6,3 +6,10 @@ body {
   background-color: $main-bgc;
   color: $black;
 }
+
+.header__contacts-smbt:hover .header__contacts-smbt-block,
+.planet__contacts-smbt:hover .planet__contacts-smbt-block,
+.card__contacts-smbt:hover .card__contacts-smbt-block {
+  background-color: $submit-color-2;
+  transition: background-color 0.3s ease;
+}

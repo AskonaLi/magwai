@@ -28,6 +28,10 @@
   width: 250px;
   cursor: pointer;
   text-transform: uppercase;
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $submit-color-2;
+  }
 }
 
 @mixin contacts-smbt-block {
