@@ -9,7 +9,7 @@
 
 ## Технологии:
 - HTML
-- CSS
+- SCSS
 - JavaScript
 - Webpack
 
