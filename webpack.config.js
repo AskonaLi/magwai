@@ -8,13 +8,31 @@ const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
+/** Открывает браузер только после первой успешной сборки (стили успевают подгрузиться). */
+class OpenBrowserAfterCompilePlugin {
+  constructor(port = 3000, host = 'localhost') {
+    this.port = port;
+    this.host = host;
+    this.opened = false;
+  }
+
+  apply(compiler) {
+    compiler.hooks.done.tap('OpenBrowserAfterCompilePlugin', (stats) => {
+      if (this.opened || stats.hasErrors()) return;
+      this.opened = true;
+      const open = require('open');
+      open(`http://${this.host}:${this.port}`);
+    });
+  }
+}
+
 module.exports = {
   mode,
   target,
   devtool,
   devServer: {
     port: 3000,
-    open: true,
+    open: false,
     hot: true,
   },
   entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -35,6 +53,7 @@ module.exports = {
       extensions: ['js'],
       failOnError: false,
     }),
+    ...(devMode ? [new OpenBrowserAfterCompilePlugin(3000)] : []),
   ],
   module: {
     rules: [
@@ -54,7 +73,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
@@ -62,6 +81,10 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
         use: devMode
           ? []
           : [
@@ -87,7 +110,6 @@ module.exports = {
                 },
               },
             ],
-        type: 'asset/resource',
       },
       {
         test: /\.m?js$/,

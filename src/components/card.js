@@ -1,4 +1,4 @@
-import bridgeImg from '../../img/coins.png';
+import bridgeImg from '../img/coins.png';
 
 export const cardTemplate = document.querySelector('#card-template').content;
 

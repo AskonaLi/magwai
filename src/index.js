@@ -3,15 +3,15 @@ import './index.scss';
 
 import bridgeImg from './img/coins.png';
 
-import { loadingCardsInfo, loadingImageInfo } from './style/components/api';
+import { loadingCardsInfo, loadingImageInfo } from './components/api';
 
-import { initialCards } from './style/components/card-items';
+import { initialCards } from './components/card-items';
 
-import { cardTemplate, createCard } from './style/components/card';
+import { cardTemplate, createCard } from './components/card';
 
 const cardList = document.querySelector('.card__list');
 
-const cardCotactsSmbtBtn = document.querySelector('.card__contacts-smbt-btn');
+const cardContactsSmbtBtn = document.querySelector('.card__contacts-smbt-btn');
 
 // Функция открытия слайдера
 document
@@ -38,7 +38,7 @@ function renderCards() {
 }
 
 // Вывод данных о профиле и карточках с сервера
-cardCotactsSmbtBtn.addEventListener('click', () => {
+cardContactsSmbtBtn.addEventListener('click', () => {
   Promise.all([loadingImageInfo(), loadingCardsInfo()])
     .then(([imageInfoResult, cardsInfoResult]) => {
       // Берём первые MAX_CARDS записей
