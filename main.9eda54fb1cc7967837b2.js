@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/style/components/api.js":
-/*!*************************************!*\
-  !*** ./src/style/components/api.js ***!
-  \*************************************/
+/***/ "./src/components/api.js":
+/*!*******************************!*\
+  !*** ./src/components/api.js ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -44,17 +44,17 @@ function loadingImageInfo() {
 
 /***/ }),
 
-/***/ "./src/style/components/card-items.js":
-/*!********************************************!*\
-  !*** ./src/style/components/card-items.js ***!
-  \********************************************/
+/***/ "./src/components/card-items.js":
+/*!**************************************!*\
+  !*** ./src/components/card-items.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initialCards: () => (/* binding */ initialCards)
 /* harmony export */ });
-/* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../img/coins.png */ "./src/img/coins.png");
+/* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/coins.png */ "./src/img/coins.png");
 
 var initialCards = [{
   url: _img_coins_png__WEBPACK_IMPORTED_MODULE_0__,
@@ -91,10 +91,10 @@ var initialCards = [{
 
 /***/ }),
 
-/***/ "./src/style/components/card.js":
-/*!**************************************!*\
-  !*** ./src/style/components/card.js ***!
-  \**************************************/
+/***/ "./src/components/card.js":
+/*!********************************!*\
+  !*** ./src/components/card.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   cardTemplate: () => (/* binding */ cardTemplate),
 /* harmony export */   createCard: () => (/* binding */ createCard)
 /* harmony export */ });
-/* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../img/coins.png */ "./src/img/coins.png");
+/* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/coins.png */ "./src/img/coins.png");
 
 var cardTemplate = document.querySelector('#card-template').content;
 
@@ -911,7 +911,7 @@ module.exports = __webpack_require__.p + "fonts/Mulish-SemiBold.woff2";
   \***************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fonts/coins.png";
+module.exports = __webpack_require__.p + "assets/coins.png";
 
 /***/ }),
 
@@ -921,7 +921,7 @@ module.exports = __webpack_require__.p + "fonts/coins.png";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fonts/magwai-ico-png.png";
+module.exports = __webpack_require__.p + "assets/magwai-ico-png.png";
 
 /***/ }),
 
@@ -931,7 +931,7 @@ module.exports = __webpack_require__.p + "fonts/magwai-ico-png.png";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fonts/magwai-word-logo.svg";
+module.exports = __webpack_require__.p + "assets/magwai-word-logo.svg";
 
 /***/ }),
 
@@ -941,7 +941,7 @@ module.exports = __webpack_require__.p + "fonts/magwai-word-logo.svg";
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fonts/magwai.svg";
+module.exports = __webpack_require__.p + "assets/magwai.svg";
 
 /***/ }),
 
@@ -951,7 +951,7 @@ module.exports = __webpack_require__.p + "fonts/magwai.svg";
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fonts/planet-img.png";
+module.exports = __webpack_require__.p + "assets/planet-img.png";
 
 /***/ })
 
@@ -1102,9 +1102,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ "./src/index.html");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/index.scss");
 /* harmony import */ var _img_coins_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/coins.png */ "./src/img/coins.png");
-/* harmony import */ var _style_components_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style/components/api */ "./src/style/components/api.js");
-/* harmony import */ var _style_components_card_items__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style/components/card-items */ "./src/style/components/card-items.js");
-/* harmony import */ var _style_components_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style/components/card */ "./src/style/components/card.js");
+/* harmony import */ var _components_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/api */ "./src/components/api.js");
+/* harmony import */ var _components_card_items__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/card-items */ "./src/components/card-items.js");
+/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card */ "./src/components/card.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -1124,7 +1124,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 var cardList = document.querySelector('.card__list');
-var cardCotactsSmbtBtn = document.querySelector('.card__contacts-smbt-btn');
+var cardContactsSmbtBtn = document.querySelector('.card__contacts-smbt-btn');
 
 // Функция открытия слайдера
 document.querySelector('.header__burger').addEventListener('click', function () {
@@ -1141,15 +1141,15 @@ document.querySelector('.header__burger').addEventListener('click', function () 
 
 // Функция рендера карточек с корневой директории
 function renderCards() {
-  _style_components_card_items__WEBPACK_IMPORTED_MODULE_4__.initialCards.forEach(function (item) {
-    var newCardElement = (0,_style_components_card__WEBPACK_IMPORTED_MODULE_5__.createCard)(_style_components_card__WEBPACK_IMPORTED_MODULE_5__.cardTemplate, item);
+  _components_card_items__WEBPACK_IMPORTED_MODULE_4__.initialCards.forEach(function (item) {
+    var newCardElement = (0,_components_card__WEBPACK_IMPORTED_MODULE_5__.createCard)(_components_card__WEBPACK_IMPORTED_MODULE_5__.cardTemplate, item);
     cardList.append(newCardElement);
   });
 }
 
 // Вывод данных о профиле и карточках с сервера
-cardCotactsSmbtBtn.addEventListener('click', function () {
-  Promise.all([(0,_style_components_api__WEBPACK_IMPORTED_MODULE_3__.loadingImageInfo)(), (0,_style_components_api__WEBPACK_IMPORTED_MODULE_3__.loadingCardsInfo)()]).then(function (_ref) {
+cardContactsSmbtBtn.addEventListener('click', function () {
+  Promise.all([(0,_components_api__WEBPACK_IMPORTED_MODULE_3__.loadingImageInfo)(), (0,_components_api__WEBPACK_IMPORTED_MODULE_3__.loadingCardsInfo)()]).then(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
       imageInfoResult = _ref2[0],
       cardsInfoResult = _ref2[1];
@@ -1166,7 +1166,7 @@ cardCotactsSmbtBtn.addEventListener('click', function () {
 
     // Вывести карточки на страницу
     cardsWidthImages.slice(0, MAX_CARDS).forEach(function (item) {
-      var eachElement = (0,_style_components_card__WEBPACK_IMPORTED_MODULE_5__.createCard)(_style_components_card__WEBPACK_IMPORTED_MODULE_5__.cardTemplate, item);
+      var eachElement = (0,_components_card__WEBPACK_IMPORTED_MODULE_5__.createCard)(_components_card__WEBPACK_IMPORTED_MODULE_5__.cardTemplate, item);
       cardList.append(eachElement);
     });
   }).catch(function (err) {
@@ -1178,4 +1178,4 @@ renderCards(); // Рендерим все карточки при загрузк
 
 /******/ })()
 ;
-//# sourceMappingURL=main.964f800baff6827956b6.js.map
+//# sourceMappingURL=main.9eda54fb1cc7967837b2.js.map
